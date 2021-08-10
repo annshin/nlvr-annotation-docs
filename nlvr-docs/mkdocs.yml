@@ -1,0 +1,8 @@
+site_name: NLVR annotation docs
+site_url:
+nav:
+        - Home: index.md
+        - Utility-functions: utility-functions.md
+        - Data-structures: data-structure.md
+        - Variables: variables.md
+theme: readthedocs
