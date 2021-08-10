@@ -6,3 +6,11 @@ nav:
         - Data-structures: data-structure.md
         - Variables: variables.md
 theme: readthedocs
+plugins:
+        - search
+        - mkapi:
+            src_dirs: [examples]
+markdown_extensions:
+  - pymdownx.arithmatex
+extra_javascript:  # for pymdownx.arithmatex
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML
