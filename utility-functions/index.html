@@ -88,7 +88,7 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#logical-operators">Logical operators</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#other-functions">Other functions</a>
+    <li class="toctree-l2"><a class="reference internal" href="#other-functions-set-related">Other functions (set-related)</a>
     </li>
     </ul>
                     </li>
@@ -1655,7 +1655,7 @@
 
 </div>
 
-<h2 id="other-functions">Other functions</h2>
+<h2 id="other-functions-set-related">Other functions (set-related)</h2>
 <div class="mkapi-node" id="logical_forms.All">
 <div class='mkapi-object-container'>
   <div class="mkapi-object function code top">
@@ -1752,7 +1752,7 @@
 
 <li><code class="mkapi-item-name">_set</code>
 
-<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a set</span></li>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a set of items</span></li>
 
 
 </ul></div>
@@ -1806,6 +1806,195 @@
           <span class="mkapi-section-name-body returns">Returns</span> 
         </div>
       <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.all_same">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">all_same</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">_set</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Check if all the items within a set are identical.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.all_same_attribute">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">all_same_attribute</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">_set</code>, <code class="mkapi-object-signature">func</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Check if all the items within a set are identical.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+
+<li><code class="mkapi-item-name">func</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a function that verifies a certain property of a given object in the set</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.all_same_shape">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">all_same_shape</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">_set</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Check if all the items within a set have an identical shape.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.all_same_color">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">all_same_color</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">_set</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Check if all the items within a set have an identical color.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.union">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">union</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">set1</code>, <code class="mkapi-object-signature">set2</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gives the union of 2 sets.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The union of set1 and set2</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.union_all">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">union_all</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">sets</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gives a set which is the union of all the items within an ensemble (ex. a list) of sets.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The set which is the union of all the items within an ensemble (ex. a list) of sets</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.intersect">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">intersect</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">set1</code>, <code class="mkapi-object-signature">set2</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gives the intersection of 2 sets.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The intersection of set1 and set2</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.intersect_all">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">intersect_all</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">sets</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gives the intersection of an ensemble of sets.</p></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>The intersection of an ensemble of sets</p></div>
     </div>
   </div>
 
