@@ -66,9 +66,9 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#size">Size</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#relative-location-in-box">Relative location in box</a>
+    <li class="toctree-l2"><a class="reference internal" href="#relative-location-in-the-box">Relative location in the box</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#touching-the-walls-of-the-box">Touching the walls of the box</a>
+    <li class="toctree-l2"><a class="reference internal" href="#touching-the-box">Touching the box</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#query-functions">Query functions</a>
     </li>
@@ -555,7 +555,7 @@
 
 </div>
 
-<h2 id="relative-location-in-box">Relative location in box</h2>
+<h2 id="relative-location-in-the-box">Relative location in the box</h2>
 <div class="mkapi-node" id="logical_forms.is_top">
 <div class='mkapi-object-container'>
   <div class="mkapi-object function code top">
@@ -692,7 +692,7 @@
 
 </div>
 
-<h2 id="touching-the-walls-of-the-box">Touching the walls of the box</h2>
+<h2 id="touching-the-box">Touching the box</h2>
 <div class="mkapi-node" id="logical_forms.is_touching_wall">
 <div class='mkapi-object-container'>
   <div class="mkapi-object function code top">
@@ -780,6 +780,44 @@
 <div class="mkapi-docstring">
 <div class="mkapi-section">
       <div class="mkapi-section-body"><p>Check if the item is touching a corner</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">x</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Item</span></li>
+
+<li><code class="mkapi-item-name">side</code>
+<span class="mkapi-item-type">(optional)</span>
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">Optional, can be 'Side.ANY', 'Side.LEFT', 'Side.RIGHT', 'Side.TOP', 'Side.BOTTOM'</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A boolean</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.is_closely_touching_corner">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">is_closely_touching_corner</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">x</code>, <code class="mkapi-object-signature">side=None</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Check if the item is closely touching a corner</p></div>
     </div>
   <div class="mkapi-section parameters">
       <div class="mkapi-section-name parameters">
