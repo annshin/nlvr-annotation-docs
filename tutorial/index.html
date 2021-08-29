@@ -74,19 +74,15 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#text-tutorial">Text tutorial</a>
         <ul>
-    <li class="toctree-l3"><a class="reference internal" href="#step-1">Step 1</a>
+    <li class="toctree-l3"><a class="reference internal" href="#1-log-in">1: Log in</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-2">Step 2</a>
+    <li class="toctree-l3"><a class="reference internal" href="#2-mode-selection">2: Mode selection</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-3">Step 3</a>
+    <li class="toctree-l3"><a class="reference internal" href="#3-write-the-code">3: Write the code</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-4">Step 4</a>
+    <li class="toctree-l3"><a class="reference internal" href="#4-before-submitting">4: Before submitting</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-5">Step 5</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-6">Step 6</a>
-    </li>
-    <li class="toctree-l3"><a class="reference internal" href="#step-7">Step 7</a>
+    <li class="toctree-l3"><a class="reference internal" href="#if-applicable-skip-an-example">(if applicable): Skip an example</a>
     </li>
         </ul>
     </li>
@@ -127,28 +123,50 @@
             <div class="section">
               
                 <h1 id="tutorial">Tutorial</h1>
+<p>This tutorial shows an example of annotation and where to find the tools for annotating.</p>
 <p>The content of video and text tutorials are the same.</p>
 <h2 id="video-tutorial">Video tutorial</h2>
 <p><a href="https://nlvr-annotation.web.app/tutorial.html">Link</a></p>
 <h2 id="text-tutorial">Text tutorial</h2>
-<h3 id="step-1">Step 1</h3>
-<p><img alt="" src="../tuto/p1.jpg" title="p1" /></p>
-<h3 id="step-2">Step 2</h3>
-<p><img alt="" src="../tuto/p2.jpg" title="p2" /></p>
-<h3 id="step-3">Step 3</h3>
-<p><img alt="" src="../tuto/p3.jpg" title="p3" /></p>
-<h3 id="step-4">Step 4</h3>
-<p><img alt="" src="../tuto/p4.jpg" title="p4" /></p>
-<h3 id="step-5">Step 5</h3>
+<h3 id="1-log-in">1: Log in</h3>
+<p>Please log in using the credentials.
+If you do not have the credentials, please reach out to aw588@cornell.edu.</p>
+<p>Please allow a few seconds for page redirection.</p>
+<p><img alt="" src="../tuto/login.png" title="p1" /></p>
+<h3 id="2-mode-selection">2: Mode selection</h3>
+<p>Please choose the "test" mode if it's it's for testing the tool, or for an interview.
+The "normal" mode is the working mode, and will require appropriate access rights.</p>
+<p>Goal of this task: write a correct Python expression expressing the sentence in the box.
+We will then use the expression to evaluate whether the sentence is true for the image. </p>
+<p>There can be different images. </p>
+<p>For the image in our example, the resulting boolean should be True, since the box on the right contains 5 yellow items.</p>
+<p><img alt="" src="../tuto/mode.png" title="p2" /></p>
+<h3 id="3-write-the-code">3: Write the code</h3>
+<p>We will write the Python expression, using the functions and methods provided (shown on the left on the page, or on this documentation website).</p>
+<p>There are also some data structures and variables provided that you can use.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Please only use the provided functions. If you cannot annotate with the current functions, please do not write your own functions, and reach out via email or by leaving a comment in the comment box below (Step 7).</p>
+<p>Attention: please <strong>ONLY</strong> use the provided functions and methods. If you think the annotation cannot be done with them, or if there is an issue, please click on "Skip this example", and leave your comment. You can also note the Image ID and reach out to aw588@cornell.edu.</p>
 </div>
-<p><img alt="" src="../tuto/p5.jpg" title="p5" /></p>
-<h3 id="step-6">Step 6</h3>
-<p><img alt="" src="../tuto/p6.jpg" title="p6" /></p>
-<h3 id="step-7">Step 7</h3>
-<p><img alt="" src="../tuto/p7.jpg" title="p7" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Attention: Different expressions can be valid and correct for the sentence. Please opt for <strong>SHORTER CODE</strong> when possible, since it usually aligns better with the language of the sentence.</p>
+</div>
+<p>Here, we filter over all the boxes and try to find if there's a box with 5 yellow items.</p>
+<p>You can click on the blue button "Check syntax" to check if the syntax of your expression is valid.</p>
+<p>When you finish writing, please click on the blue button "Validate" to validate your result over the visible image, and a few hidden cases.</p>
+<p>The validation results should all be correct. If not, please try to review the code. 
+If you think that there is a bug or issue (with the data, or else), please click on "Skip" and leave your comment.</p>
+<p><img alt="" src="../tuto/write_the_code.png" title="p3" /></p>
+<h3 id="4-before-submitting">4: Before submitting</h3>
+<p><strong>Confidence score</strong>: Then, please assign a confidence score to the code you wrote (to which extent this code is faithfully "translating" the sentence in a clear and simple way?).</p>
+<p><strong>Any comment?</strong>: If you have any comment or thought about this case, please leave your comment in the text box "Comment".</p>
+<p><strong>Submit</strong>: Then, you can submit. 
+(You cannot if all the cases have not been validated previously!)</p>
+<p><img alt="" src="../tuto/before_submitting.png" title="p4" /></p>
+<h3 id="if-applicable-skip-an-example">(if applicable): Skip an example</h3>
+<p>If you think the annotation cannot be done with them, or if there is an issue, please click on "Skip this example", and leave your comment. You can also note the Image ID and reach out to aw588@cornell.edu.</p>
+<p><img alt="" src="../tuto/skip.png" title="p5" /></p>
               
             </div>
           </div>
