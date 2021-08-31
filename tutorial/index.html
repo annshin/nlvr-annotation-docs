@@ -77,12 +77,42 @@
     <li class="toctree-l3"><a class="reference internal" href="#1-log-in">1: Log in</a>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#2-mode-selection">2: Mode selection</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#goal-of-task">Goal of task</a>
+    </li>
+        </ul>
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#3-write-the-code">3: Write the code</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#what-to-do">What to do</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#4-before-submitting">4: Before submitting</a>
+    <li class="toctree-l4"><a class="reference internal" href="#syntax-checking">Syntax checking</a>
     </li>
-    <li class="toctree-l3"><a class="reference internal" href="#if-applicable-skip-an-example">(if applicable): Skip an example</a>
+    <li class="toctree-l4"><a class="reference internal" href="#validation">Validation</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#what-to-avoid">What to avoid</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-submission">4: Submission</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#before-submitting">Before submitting</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#if-applicable-skip-an-example">(If applicable): Skip an example</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#examples">Examples</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-1">Ex 1</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-2">Ex 2</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-3">Ex 3</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-4">Ex 4</a>
     </li>
         </ul>
     </li>
@@ -123,50 +153,223 @@
             <div class="section">
               
                 <h1 id="tutorial">Tutorial</h1>
-<p>This tutorial shows an example of annotation and where to find the tools for annotating.</p>
-<p>The content of video and text tutorials are the same.</p>
+<p>You can choose:</p>
+<ul>
+<li>
+<p>the <a href="https://annshin.github.io/nlvr-annotation-docs/tutorial/index.html#video-tutorial">video tutorial</a></p>
+</li>
+<li>
+<p>or the <a href="https://annshin.github.io/nlvr-annotation-docs/tutorial/index.html#text-tutorial">text tutorial</a>,</p>
+</li>
+</ul>
+<p>that both show an example of annotation, and where to find the tools you need.</p>
+<p>Below the text tutorial, there are <a href="https://annshin.github.io/nlvr-annotation-docs/tutorial/index.html#examples"><em>4 additional examples</em></a> of annotation.
+Please check the examples after reading/watching the tutorial.</p>
 <h2 id="video-tutorial">Video tutorial</h2>
-<p><a href="https://nlvr-annotation.web.app/tutorial.html">Link</a></p>
+<p><a href="https://nlvr-annotation.web.app/tutorial.html" target="_blank">Link</a></p>
 <h2 id="text-tutorial">Text tutorial</h2>
 <h3 id="1-log-in">1: Log in</h3>
-<p>Please log in using the credentials.
-If you do not have the credentials, please reach out to aw588@cornell.edu.</p>
-<p>Please allow a few seconds for page redirection.</p>
-<p><img alt="" src="../tuto/login.png" title="p1" /></p>
+<p>Please <a href="https://nlvr-annotation.web.app/auth.html" target="_blank">log in</a> using your credentials.
+If you do not have the credentials, please reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;">&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;</a>.</p>
+<p><em>Allow a few seconds for page redirection.</em></p>
+<table><tr><td>
+    <img src="../tuto/login.png" />
+</td></tr></table>
+
 <h3 id="2-mode-selection">2: Mode selection</h3>
-<p>Please choose the "test" mode if it's it's for testing the tool, or for an interview.
-The "normal" mode is the working mode, and will require appropriate access rights.</p>
-<p>Goal of this task: write a correct Python expression expressing the sentence in the box.
-We will then use the expression to evaluate whether the sentence is true for the image. </p>
-<p>There can be different images. </p>
-<p>For the image in our example, the resulting boolean should be True, since the box on the right contains 5 yellow items.</p>
-<p><img alt="" src="../tuto/mode.png" title="p2" /></p>
+<p>Are you:</p>
+<ul>
+<li>
+<p>testing the tool / doing an interview ? Select the <strong>test</strong> mode (with 5 sentences).</p>
+</li>
+<li>
+<p>working as usual ? Select the <strong>normal</strong> mode. (Will require appropriate access rights)</p>
+</li>
+</ul>
+<table><tr><td>
+    <img src="../tuto/mode.png" />
+</td></tr></table>
+
+<p>The page after mode selection looks like this:</p>
+<table><tr><td>
+    <img src="../tuto/mode_after.png" />
+</td></tr></table>
+
+<h4 id="goal-of-task">Goal of task</h4>
+<p><strong>Instructions</strong>: Please look at the sentence in the box below describing the image, and write a correct Python expression for this sentence. </p>
+<p>In case of doubt, please:</p>
+<ul>
+<li>
+<p>first refer to the <a href="https://nlvr-annotation.web.app/tutorial.html" target="_blank">Tutorial</a> or the <a href="https://annshin.github.io/nlvr-annotation-docs/" target="_blank">Documentation</a>, </p>
+</li>
+<li>
+<p>if you have additional questions, </p>
+<ul>
+<li>post it on the <a href="https://discord.gg/EWyKTgxakH" target="_blank">Annotation QA Discord</a>,</li>
+<li>or contact <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;">&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;</a>.</li>
+</ul>
+</li>
+</ul>
+<table><tr><td>
+    <img src="../tuto/goal.png" />
+</td></tr></table>
+
+<p><strong>How to understand this task?</strong></p>
+<p>There are 3 elements in this box:</p>
+<ul>
+<li>a sentence</li>
+<li>an image, divided into 3 boxes</li>
+<li>a Boolean</li>
+</ul>
+<p>This sentence states: "There are 2 blue squares". For <strong>the image above</strong>, we effectively observe 2 blue squares (1 in the box in the middle, and 1 in the right box).</p>
+<p>Thus, the sentence is <strong>true</strong> for the image above.</p>
+<p>For the image below, the sentence is false.</p>
+<table><tr><td>
+    <img src="../tuto/goal_2.png" />
+</td></tr></table>
+
+<p>What we need to do, is to <em>translate</em> the sentence into a Python expression, that can evaluate whether the sentence is true or false for a given image.</p>
+<p>Below is an example.</p>
 <h3 id="3-write-the-code">3: Write the code</h3>
-<p>We will write the Python expression, using the functions and methods provided (shown on the left on the page, or on this documentation website).</p>
-<p>There are also some data structures and variables provided that you can use.</p>
+<p>We will write the Python expression, using the <a href="https://annshin.github.io/nlvr-annotation-docs/utility-functions/" target="_blank">functions</a> provided.</p>
+<p>You can also use the <a href="https://annshin.github.io/nlvr-annotation-docs/data-structure/" target="_blank">data structures</a> with corresponding methods, and <a href="https://annshin.github.io/nlvr-annotation-docs/variables/" target="_blank">variables</a> provided.</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Please <strong>ONLY</strong> use the provided functions and methods. 
+If you think one annotation cannot be done with them, or if there is an issue, please click on "Skip this example", and leave your comment in the pop-up box. You can also note the Image ID(s), and reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;">&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;</a>.</p>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Different expressions can be valid and correct for one sentence. Please opt for <strong>SHORTER CODE</strong> when possible, since it usually aligns better with the language of the sentence.</p>
+</div>
+<h4 id="what-to-do">What to do</h4>
+<p>For the example above, we want to check if there are 2 blue squares in the image.</p>
+<p>One way we can think of it (<em>and it is not the only one</em>) is to check all the items in the image, and filter over them by checking if they are blue AND a square.</p>
+<p>Now, let's implement it.</p>
+<ol>
+<li>
+<p>We can see that on the page <a href="https://annshin.github.io/nlvr-annotation-docs/variables/" target="_blank">Variables</a> that there is a variable called <code>all_items</code>.</p>
+</li>
+<li>
+<p>On the page <a href="https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters" target="_blank">Utility functions</a>, section <em>Filters</em>, there is a function <code>filter_obj</code> that we can use.</p>
+</li>
+<li>
+<p>The filtering conditions apply to the color and to the shape of the item. We can find the function <code>is_blue</code> in the section <em>Color</em>, and <code>is_square</code> in the section <em>Shape</em>.</p>
+</li>
+<li>
+<p>We can now write the filtering part, using a lambda function:</p>
+</li>
+</ol>
+<pre><code class="language-python">filter_obj(all_items, lambda x: is_blue(x) and is_square(x))
+</code></pre>
+<ol>
+<li>Finally, we want to check the existence of 2 items satisfying the conditions. In the section <em>General</em>, we can find a function <code>count</code> that we may use. So, our final expression can be like:</li>
+</ol>
+<pre><code class="language-python">count(filter_obj(all_items, lambda x: is_blue(x) and is_square(x))) == 2
+</code></pre>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Attention: please <strong>ONLY</strong> use the provided functions and methods. If you think the annotation cannot be done with them, or if there is an issue, please click on "Skip this example", and leave your comment. You can also note the Image ID and reach out to aw588@cornell.edu.</p>
+<p>This is just <strong>a</strong> solution, not <strong>the</strong> solution!</p>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Attention: Different expressions can be valid and correct for the sentence. Please opt for <strong>SHORTER CODE</strong> when possible, since it usually aligns better with the language of the sentence.</p>
-</div>
-<p>Here, we filter over all the boxes and try to find if there's a box with 5 yellow items.</p>
-<p>You can click on the blue button "Check syntax" to check if the syntax of your expression is valid.</p>
-<p>When you finish writing, please click on the blue button "Validate" to validate your result over the visible image, and a few hidden cases.</p>
-<p>The validation results should all be correct. If not, please try to review the code. 
-If you think that there is a bug or issue (with the data, or else), please click on "Skip" and leave your comment.</p>
-<p><img alt="" src="../tuto/write_the_code.png" title="p3" /></p>
-<h3 id="4-before-submitting">4: Before submitting</h3>
-<p><strong>Confidence score</strong>: Then, please assign a confidence score to the code you wrote (to which extent this code is faithfully "translating" the sentence in a clear and simple way?).</p>
-<p><strong>Any comment?</strong>: If you have any comment or thought about this case, please leave your comment in the text box "Comment".</p>
-<p><strong>Submit</strong>: Then, you can submit. 
+<h4 id="syntax-checking">Syntax checking</h4>
+<p>During the writing time, you can click on <span style="color:blue"><strong>Check syntax</strong></span> to verify if the syntax of your expression is valid.</p>
+<p>If it is, the <strong>Output</strong> panel will just show the Running time. Otherwise, it will display an error message.</p>
+<table><tr><td>
+    <img src="../tuto/check_syntax.png" />
+</td></tr></table>
+
+<h4 id="validation">Validation</h4>
+<p>When you finished your Python expression, please click on the button <span style="color:blue"><strong>Validate</strong></span> to validate your result on the visible image, and a few hidden cases.</p>
+<p>You should expect your expression to pass all the cases:</p>
+<table><tr><td>
+    <img src="../tuto/validate.png" />
+</td></tr></table>
+
+<p>...Otherwise, please review your code with the help of the details given in the output, and modify your code so that it passes all the test cases.</p>
+<table><tr><td>
+    <img src="../tuto/validate_unsuccessful.png" />
+</td></tr></table>
+
+<p>If you think that there is a bug or any other issue (with the data, or else), please click on <span style="color:gray"><strong>Skip this example</strong></span> and leave your comment. You can also note the Image ID(s), and reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;">&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;</a>.</p>
+<h4 id="what-to-avoid">What to avoid</h4>
+<p>Sometimes you might be able to pass all the cases using a <strong>wrong</strong> expression, however it does <strong>not</strong> correspond to the sentence. These issues can be more or less visible (some may be due to reasoning), please verify your expression as much as possible, so that it <strong>correctly</strong> expresses the sentence.</p>
+<table><tr><td>
+    <img src="../tuto/not_to_do.png" />
+</td></tr></table>
+
+<h3 id="4-submission">4: Submission</h3>
+<h4 id="before-submitting">Before submitting</h4>
+<p>At the bottom of the page, you can find 2 sections:</p>
+<ol>
+<li>
+<p><strong>Confidence score</strong>: Please assign a confidence score to the code you wrote. To which extent this code is faithfully "translating" the sentence in a clear and simple way? For instance, if you are not confident about the reasoning, you may want to choose a lower score for this case.</p>
+</li>
+<li>
+<p><strong>Comment</strong>: If you have any comment or thought about this case, please leave your comment in the text box "Comment".</p>
+</li>
+</ol>
+<p>After filling out these sections, you can <span style="color:blue">Submit</span>. 
 (You cannot if all the cases have not been validated previously!)</p>
-<p><img alt="" src="../tuto/before_submitting.png" title="p4" /></p>
-<h3 id="if-applicable-skip-an-example">(if applicable): Skip an example</h3>
-<p>If you think the annotation cannot be done with them, or if there is an issue, please click on "Skip this example", and leave your comment. You can also note the Image ID and reach out to aw588@cornell.edu.</p>
-<p><img alt="" src="../tuto/skip.png" title="p5" /></p>
+<table><tr><td>
+    <img src="../tuto/score_comment.png" />
+</td></tr></table>
+
+<h3 id="if-applicable-skip-an-example">(If applicable): Skip an example</h3>
+<p>If you think the annotation cannot be done with the provided materials (functions, data structures, variables), or if there is an issue about the case you are working on, please:</p>
+<ol>
+<li>
+<p>click on <span style="color:gray"><strong>Skip this example</strong></span>, </p>
+</li>
+<li>
+<p>leave your comment: specifically, why you want to skip this case? What issue did you encounter? </p>
+</li>
+</ol>
+<p>You can also note the Image ID and reach out to <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;">&#97;&#119;&#53;&#56;&#56;&#64;&#99;&#111;&#114;&#110;&#101;&#108;&#108;&#46;&#101;&#100;&#117;</a>.</p>
+<table><tr><td>
+    <img src="../tuto/skip.png" />
+</td></tr></table>
+
+<h2 id="examples">Examples</h2>
+<p>Below are a few examples of annotation with (just) <strong>some</strong> possible answer.</p>
+<h3 id="ex-1">Ex 1</h3>
+<p>Case: There is 1 box with 2 items</p>
+<table><tr><td>
+    <img src="../tuto/ex1.png" />
+</td></tr></table>
+
+<p>Python expression:</p>
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(x.get_all_items_in_box()) == 2))
+</code></pre>
+<h3 id="ex-2">Ex 2</h3>
+<p>Case: There is 1 box with 5 yellow items</p>
+<table><tr><td>
+    <img src="../tuto/ex2.png" />
+</td></tr></table>
+
+<p>Python expression:</p>
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(filter_color(x.get_all_items_in_box(), Color.YELLOW)) == 5))
+</code></pre>
+<p>This expression is also valid (but slightly longer):</p>
+<pre><code class="language-python">count(filter_obj(all_boxes, lambda x: count(filter_color(x.get_all_items_in_box(), Color.YELLOW)) == 5)) == 1
+</code></pre>
+<h3 id="ex-3">Ex 3</h3>
+<p>Case: There is a small black triangle touching the wall.</p>
+<table><tr><td>
+    <img src="../tuto/ex3.png" />
+</td></tr></table>
+
+<p>Python expression:</p>
+<pre><code class="language-python">exist(filter_obj(all_items, lambda x: is_small(x) and is_black(x) and is_triangle(x) and is_touching_wall(x)))
+</code></pre>
+<h3 id="ex-4">Ex 4</h3>
+<p>Case: There is a box with all 3 different colors and only 1 blue item.</p>
+<table><tr><td>
+    <img src="../tuto/ex4.png" />
+</td></tr></table>
+
+<p>Python expression:</p>
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: Any(x.get_all_items_in_box(), is_black) and Any(x.get_all_items_in_box(), is_blue) and Any(x.get_all_items_in_box(), is_yellow) and count(filter_color(x.get_all_items_in_box(), Color.BLUE)) == 1))
+</code></pre>
               
             </div>
           </div>
