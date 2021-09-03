@@ -338,7 +338,7 @@ If you think one annotation cannot be done with them, or if there is an issue, p
 </td></tr></table>
 
 <p>Python expression:</p>
-<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(x.get_all_items_in_box()) == 2))
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(x.all_items_in_box()) == 2))
 </code></pre>
 <h3 id="ex-2">Ex 2</h3>
 <p>Case: There is 1 box with 5 yellow items</p>
@@ -347,10 +347,10 @@ If you think one annotation cannot be done with them, or if there is an issue, p
 </td></tr></table>
 
 <p>Python expression:</p>
-<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(filter_color(x.get_all_items_in_box(), Color.YELLOW)) == 5))
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(filter_color(x.all_items_in_box(), Color.YELLOW)) == 5))
 </code></pre>
 <p>This expression is also valid (but slightly longer):</p>
-<pre><code class="language-python">count(filter_obj(all_boxes, lambda x: count(filter_color(x.get_all_items_in_box(), Color.YELLOW)) == 5)) == 1
+<pre><code class="language-python">count(filter_obj(all_boxes, lambda x: count(filter_color(x.all_items_in_box(), Color.YELLOW)) == 5)) == 1
 </code></pre>
 <h3 id="ex-3">Ex 3</h3>
 <p>Case: There is a small black triangle touching the wall.</p>
@@ -368,7 +368,7 @@ If you think one annotation cannot be done with them, or if there is an issue, p
 </td></tr></table>
 
 <p>Python expression:</p>
-<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: Any(x.get_all_items_in_box(), is_black) and Any(x.get_all_items_in_box(), is_blue) and Any(x.get_all_items_in_box(), is_yellow) and count(filter_color(x.get_all_items_in_box(), Color.BLUE)) == 1))
+<pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: Any(x.all_items_in_box(), is_black) and Any(x.all_items_in_box(), is_blue) and Any(x.all_items_in_box(), is_yellow) and count(filter_color(x.all_items_in_box(), Color.BLUE)) == 1))
 </code></pre>
               
             </div>
