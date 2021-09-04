@@ -114,6 +114,10 @@
     </li>
     <li class="toctree-l3"><a class="reference internal" href="#ex-4">Ex 4</a>
     </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-5">Ex 5</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#ex-6">Ex 6</a>
+    </li>
         </ul>
     </li>
     </ul>
@@ -332,43 +336,137 @@ If you think one annotation cannot be done with them, or if there is an issue, p
 <h2 id="examples">Examples</h2>
 <p>Below are a few examples of annotation with (just) <strong>some</strong> possible answer.</p>
 <h3 id="ex-1">Ex 1</h3>
-<p>Case: There is 1 box with 2 items</p>
+<p><strong>Sentence</strong>: There is 1 box with 2 items</p>
 <table><tr><td>
     <img src="../tuto/ex1.png" />
 </td></tr></table>
 
-<p>Python expression:</p>
+<!-- **Functions/methods/variables involved**:
+
+- [exist](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [count](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [filter_obj](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- lambda function
+
+- [Box.all_items_in_box](https://annshin.github.io/nlvr-annotation-docs/data-structure/) (method)
+
+- [all_boxes](https://annshin.github.io/nlvr-annotation-docs/variables/) (variable)
+ -->
+<p><strong>Python expression</strong>:</p>
 <pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(x.all_items_in_box()) == 2))
 </code></pre>
 <h3 id="ex-2">Ex 2</h3>
-<p>Case: There is 1 box with 5 yellow items</p>
+<p><strong>Sentence</strong>: There is 1 box with 5 yellow items</p>
 <table><tr><td>
     <img src="../tuto/ex2.png" />
 </td></tr></table>
 
-<p>Python expression:</p>
+<!-- **Functions/methods/variables involved**:
+
+- [exist](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [count](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [filter_obj](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- [filter_color](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- lambda function
+
+- [Box.all_items_in_box](https://annshin.github.io/nlvr-annotation-docs/data-structure/) (method)
+
+- [all_boxes](https://annshin.github.io/nlvr-annotation-docs/variables/) (variable)
+ -->
+<p><strong>Python expression</strong>:</p>
 <pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: count(filter_color(x.all_items_in_box(), Color.YELLOW)) == 5))
 </code></pre>
 <p>This expression is also valid (but slightly longer):</p>
 <pre><code class="language-python">count(filter_obj(all_boxes, lambda x: count(filter_color(x.all_items_in_box(), Color.YELLOW)) == 5)) == 1
 </code></pre>
 <h3 id="ex-3">Ex 3</h3>
-<p>Case: There is a small black triangle touching the wall.</p>
+<p><strong>Sentence</strong>: There is a small black triangle touching the wall.</p>
 <table><tr><td>
     <img src="../tuto/ex3.png" />
 </td></tr></table>
 
-<p>Python expression:</p>
+<!-- **Functions/methods/variables involved**:
+
+- [exist](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [filter_obj](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- lambda function
+
+- [Box.all_items_in_box](https://annshin.github.io/nlvr-annotation-docs/data-structure/) (method)
+
+- [all_items](https://annshin.github.io/nlvr-annotation-docs/variables/) (variable)
+ -->
+<p><strong>Python expression</strong>:</p>
 <pre><code class="language-python">exist(filter_obj(all_items, lambda x: is_small(x) and is_black(x) and is_triangle(x) and is_touching_wall(x)))
 </code></pre>
 <h3 id="ex-4">Ex 4</h3>
-<p>Case: There is a box with all 3 different colors and only 1 blue item.</p>
+<p><strong>Sentence</strong>: There is a box with all 3 different colors and only 1 blue item.</p>
 <table><tr><td>
     <img src="../tuto/ex4.png" />
 </td></tr></table>
 
-<p>Python expression:</p>
+<!-- **Functions/methods/variables involved**:
+
+- [exist](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [filter_obj](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- [is_black, is_blue, is_yellow](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#color)
+
+- [Any](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#other-functions-set-related)
+
+- lambda function
+
+- [Box.all_items_in_box](https://annshin.github.io/nlvr-annotation-docs/data-structure/) (method)
+
+- [all_boxes](https://annshin.github.io/nlvr-annotation-docs/variables/) (variable)
+ -->
+<p><strong>Python expression</strong>:</p>
 <pre><code class="language-python">exist(filter_obj(all_boxes, lambda x: Any(x.all_items_in_box(), is_black) and Any(x.all_items_in_box(), is_blue) and Any(x.all_items_in_box(), is_yellow) and count(filter_color(x.all_items_in_box(), Color.BLUE)) == 1))
+</code></pre>
+<h3 id="ex-5">Ex 5</h3>
+<p><strong>Sentence</strong>: The first two blocks from the base of a tower are black.</p>
+<table><tr><td>
+    <img src="../tuto/ex5.png" />
+</td></tr></table>
+
+<!-- **Functions/methods/variables involved**:
+
+- [exist](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [unique](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#general)
+
+- [filter_obj](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#filters)
+
+- [is_black, is_blue, is_yellow](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#color)
+
+- [AND](https://annshin.github.io/nlvr-annotation-docs/utility-functions/#logical-operators)
+
+- lambda function
+
+- [all_items](https://annshin.github.io/nlvr-annotation-docs/variables/) (variable)
+ -->
+<p><strong>Python expression</strong>:</p>
+<pre><code class="language-python">exist(filter_obj(all_items, lambda x: AND(is_black(x), is_bottom(x)) and AND(exist(get_above(x)), is_black(unique(get_above(x))))))
+</code></pre>
+<h3 id="ex-6">Ex 6</h3>
+<p><strong>Sentence</strong>: There is a yellow block as the top of a tower with exactly three blocks.</p>
+<table><tr><td>
+    <img src="../tuto/ex6.png" />
+</td></tr></table>
+
+<!-- - [is_tower] -->
+
+<p><strong>Python expression</strong>:</p>
+<pre><code class="language-python">exist(filter_obj(all_items, lambda x: is_yellow(x) and is_top(x) and x.box.is_tower() and count(x.box.all_items_in_box()) == 3))
 </code></pre>
               
             </div>
