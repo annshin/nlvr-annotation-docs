@@ -983,6 +983,74 @@
 
 </div>
 
+<div class="mkapi-node" id="logical_forms.get_set_sizes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_set_sizes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">l</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the set of sizes of the items of a list</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">l</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a list of Item(s)</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A set containing the unique sizes of the items of a list</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.get_set_shapes">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_set_shapes</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">l</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Get the set of shapes of the items of a list</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">l</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a list of Item(s)</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>A set containing the unique shapes of the items of a list</p></div>
+    </div>
+  </div>
+
+</div>
+
 <h2 id="filters">Filters</h2>
 <div class="mkapi-node" id="logical_forms.filter_obj">
 <div class='mkapi-object-container'>
@@ -1495,7 +1563,7 @@
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of items above it/them.</p>
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of items (strictly) above it/them in the same box.</p>
 <p>For towers, the function return a set containing the block above it.</p></div>
     </div>
   <div class="mkapi-section parameters">
@@ -1530,7 +1598,7 @@
 </div>
 <div class="mkapi-docstring">
 <div class="mkapi-section">
-      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of items below it/them.</p>
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of items (strictly) below it/them in the same box.</p>
 <p>For towers, the function return a set containing the block below it.</p></div>
     </div>
   <div class="mkapi-section parameters">
@@ -1600,6 +1668,146 @@
 <div class="mkapi-docstring">
 <div class="mkapi-section">
       <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of items closely touching it/them.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">s</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">an item or a set of items</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>a set of items</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.get_box_all_above">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_box_all_above</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">s</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of all the items above it/them in the same box.</p>
+<p>For towers, the function return a set containing all the blocks above it, in the same box.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">s</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">an item or a set of items</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>a set of items</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.get_box_all_below">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_box_all_below</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">s</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of all the items below it/them in the same box.</p>
+<p>For towers, the function return a set containing all the blocks below it, in the same box.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">s</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">an item or a set of items</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>a set of items</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.get_img_all_above">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_img_all_above</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">s</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of all the items above it/them in the whole image.</p>
+<p>For towers, the function return a set containing all the blocks above it, in all the image.</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">s</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">an item or a set of items</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> 
+        </div>
+      <div class="mkapi-section-body returns"><p>a set of items</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.get_img_all_below">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">get_img_all_below</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">s</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Given an item or a set of items, return a set of all the items below it/them in the whole image.</p>
+<p>For towers, the function return a set containing all the blocks below it, in all the image.</p></div>
     </div>
   <div class="mkapi-section parameters">
       <div class="mkapi-section-name parameters">
@@ -2052,6 +2260,44 @@
           <span class="mkapi-section-name-body returns">Returns</span> 
         </div>
       <div class="mkapi-section-body returns"><p>The intersection of an ensemble of sets</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="mkapi-node" id="logical_forms.combinations">
+<div class='mkapi-object-container'>
+  <div class="mkapi-object function code top">
+    <div class="mkapi-object-kind function top">function</div>
+    <div class="mkapi-object-body function top"><code class="mkapi-object-prefix">logical_forms.</code><code class="mkapi-object-name">combinations</code><code class="mkapi-object-parenthesis">(</code><code class="mkapi-object-signature">s</code>, <code class="mkapi-object-signature">r</code><code class="mkapi-object-parenthesis">)</code></div>
+  </div>
+  
+</div>
+<div class="mkapi-docstring">
+<div class="mkapi-section">
+      <div class="mkapi-section-body"><p>Gives</p></div>
+    </div>
+  <div class="mkapi-section parameters">
+      <div class="mkapi-section-name parameters">
+          <span class="mkapi-section-name-body parameters">Parameters</span> 
+        </div>
+      <div class="mkapi-section-body parameters"><ul class="mkapi-items">
+<li><code class="mkapi-item-name">s</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">a set of items</span></li>
+
+<li><code class="mkapi-item-name">r</code>
+
+<span class="mkapi-item-dash">&mdash;</span> <span class="mkapi-item-description">int</span></li>
+
+
+</ul></div>
+    </div>
+  <div class="mkapi-section returns">
+      <div class="mkapi-section-name returns">
+          <span class="mkapi-section-name-body returns">Returns</span> <span class="mkapi-item-type">(A list of r-length subsequences from the input s. (Ex)</span>
+        </div>
+      <div class="mkapi-section-body returns"><p>combinations(s, 2) returns the list of all combinations of items in s of length 2)</p></div>
     </div>
   </div>
 
